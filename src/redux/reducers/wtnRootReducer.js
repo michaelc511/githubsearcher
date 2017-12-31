@@ -60,8 +60,7 @@ export default function wtnRootReducer(
       return { ...currentState, usersData: action.users };
 
     case 'GIT_USER_ERROR':
-      //  console.log('REDUCER GIT_USER_ERROR REDUCER .....', action.users);
-
+      console.log('REDUCER GIT_USER_ERROR REDUCER .....', action.users);
       return { ...currentState, usersData: action.users };
 
     //////////////////////////////

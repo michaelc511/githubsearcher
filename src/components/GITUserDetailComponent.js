@@ -7,9 +7,9 @@ import React from 'react';
 export default function GITUserDetailComponent(props) {
   //  if (!userpref) return null;
 
-  // console.log('GITUserDetailComponent>>>>>>>>>>>>>');
-  // console.log('Is Array?', Array.isArray(props.usersData));
-  // console.log('Type of ?', typeof props.usersData);
+  console.log('GITUserDetailComponent>>>>>>>>>>>>>', props.usersData);
+  console.log('Is Array?', Array.isArray(props.usersData));
+  console.log('Type of ?', typeof props.usersData);
   //
   // console.log('BREAK IT DOWN >>>>>>>>>>>>>');
   //
@@ -23,7 +23,24 @@ export default function GITUserDetailComponent(props) {
   // if (props.usersData[0].id === 'error') {
   //   console.log('NOT FOUND');
   // }
+
   if (props.usersData && Array.isArray(props.usersData)) {
+    if (props.usersData[0].id === 'not found') {
+      return (
+        <div className="   BusinessItemDetailComponent">
+          <div className="card">
+            <div className="card-content">
+              <span className="card-title" />User and Repo Not Found
+            </div>
+            <div className="card-image2">
+              <img src={photourl} alt="Nothing" width="800" />
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Setting up the avatar
     if (props.usersData[0].owner.avatar_url !== 'undefined') {
       photourl = props.usersData[0].owner.avatar_url;
     }
@@ -40,7 +57,7 @@ export default function GITUserDetailComponent(props) {
             <table>
               <tbody>
                 <tr>
-                  <td nowrap width="50%">
+                  <td width="50%">
                     <b>User id:</b> {props.usersData[0].owner.login}
                   </td>
 
@@ -93,17 +110,6 @@ export default function GITUserDetailComponent(props) {
       </div>
     );
   } else {
-    return (
-      <div className="   BusinessItemDetailComponent">
-        <div className="card">
-          <div className="card-content">
-            <span className="card-title" />User and Repo Not Found
-          </div>
-          <div className="card-image2">
-            <img src={photourl} alt="Nothing" width="800" />
-          </div>
-        </div>
-      </div>
-    );
+    return <div />;
   }
 }

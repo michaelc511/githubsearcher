@@ -61,5 +61,5 @@ const onDidMount = lifecycle({
     this.props.onMount();
   }
 });
-// 8) export compose
-export default compose(connectToStore, onDidMount)(withRouter(GITPage));
+// 8) export compose - add onDidMount after 'connectToStore' to show default user
+export default compose(connectToStore)(withRouter(GITPage));

@@ -9,7 +9,10 @@ export default function getGITUserByIdProcess(id) {
         //console.log('TEST', users);
 
         if (users[0].id === 'error') {
-          dispatch({ type: 'GIT_USER_ERROR' });
+          console.log('NOT FOUND ERROR.....');
+          let users = [{ id: 'not found' }];
+          console.log('users', users);
+          dispatch({ type: 'GIT_USER_ERROR', users });
 
           return users;
         }
@@ -18,8 +21,9 @@ export default function getGITUserByIdProcess(id) {
         return users;
       })
       .catch(error => {
-        //console.log('PROCESS ERROR', error);
-        dispatch({ type: 'GIT_USER_ERROR' });
+        console.log('PROCESS ERROR.....', error);
+        // let users = [{ id: 'not found' }];
+        //dispatch({ type: 'GIT_USER_ERROR' });
       });
   };
 }
