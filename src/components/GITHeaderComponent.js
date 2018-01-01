@@ -17,7 +17,7 @@ export default function GITHeaderComponent(props) {
     <header id="pageHeader" className="navbar-fixed">
       <nav className="blue">
         <div className="nav-wrapper">
-          <Link to="/github" className="brand-logo">
+          <Link to="/" className="brand-logo">
             &nbsp;&nbsp;GITHub Searcher
           </Link>
           {/* <ul className="right hide-on-med-and-down">

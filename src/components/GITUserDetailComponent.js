@@ -7,9 +7,9 @@ import React from 'react';
 export default function GITUserDetailComponent(props) {
   //  if (!userpref) return null;
 
-  console.log('GITUserDetailComponent>>>>>>>>>>>>>', props.usersData);
-  console.log('Is Array?', Array.isArray(props.usersData));
-  console.log('Type of ?', typeof props.usersData);
+  // console.log('GITUserDetailComponent>>>>>>>>>>>>>', props.usersData);
+  // console.log('Is Array?', Array.isArray(props.usersData));
+  // console.log('Type of ?', typeof props.usersData);
   //
   // console.log('BREAK IT DOWN >>>>>>>>>>>>>');
   //

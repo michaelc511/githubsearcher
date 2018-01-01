@@ -7,9 +7,9 @@ import GITUserDetailComponent from './GITUserDetailComponent';
 export default function GITUserDetailPageLayout({ userData = {}, history }) {
   //
 
-  console.log('GIT USER DETAIL LAYOUT.....................');
+  //console.log('GIT USER DETAIL LAYOUT.....................');
   //console.log(props);
-  console.log(userData);
+  //console.log(userData);
 
   let title = 'Details Report';
 

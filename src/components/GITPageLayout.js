@@ -11,7 +11,7 @@ import GITUserDetailComponent from './GITUserDetailComponent';
 
 export default function GITPageLayout(props) {
   //
-  console.log('PAGE LAYOUT COMP', props);
+  //  console.log('PAGE LAYOUT COMP', props);
 
   return (
     <div className="PageLayout">
