@@ -45,15 +45,6 @@ export default function wtnRootReducer(
     case 'LOAD_PAGE':
       return { ...currentState, showGITReport: false };
 
-    case 'GET_RENTAL':
-      //mc//console.log('GET_PREFS');
-      //mc//console.log(action.rentals);
-
-      //mc//console.log(currentState.search);
-      //mc//console.log(resetSearch);
-
-      return { ...currentState, currentRental: action.rental, showForm2: false };
-
     case 'GET_USER':
       //console.log('REDUCER GET_USER REDUCER .....', action.users);
 
