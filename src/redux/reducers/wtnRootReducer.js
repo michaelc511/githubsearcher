@@ -55,19 +55,6 @@ export default function wtnRootReducer(
       return { ...currentState, usersData: action.users };
 
     //////////////////////////////
-    case 'GET_PREFS':
-      //mc//console.log('GET_PREFS');
-      //mc//console.log(action.showForm);
-
-      let resetSearch = {
-        keyword: 'all',
-        sort: 'all',
-        price: 0
-      };
-      //mc//console.log(currentState.search);
-      //mc//console.log(resetSearch);
-
-      return { ...currentState, rentals: action.rentals, search: resetSearch, showForm: false };
     // mccode ////////////////////////////////
 
     case 'CREATE_USER':
